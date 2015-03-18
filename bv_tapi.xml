@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<bv><config><debug_file>C:\debuglogbv.txt</debug_file><reg_secret>vnam5p95h5ey332u</reg_secret><reg_url>sip:2066@192.168.100.20:5065</reg_url></config><xcapcache><resource-lists xmlns="urn:ietf:params:xml:ns:resource-lists"><list xmlns="" name="babblevoice"><entry uri="sip:2001@192.168.100.20:5065"><display-name>BV TAPI</display-name></entry></list></resource-lists></xcapcache></bv>

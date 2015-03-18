@@ -1,0 +1,195 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG1 DIALOGEX 0, 0, 232, 223
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "babblevoice.com SIP TAPI Bridge Driver"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,123,207,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,175,207,50,14
+    EDITTEXT        IDC_USER,68,18,153,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASS,68,36,153,13,ES_PASSWORD | ES_AUTOHSCROLL
+	EDITTEXT		IDC_PROXY,68,55,153,13,ES_AUTOHSCROLL
+    LTEXT           "URI",IDC_STATIC,14,20,52,10
+    LTEXT           "Password",IDC_STATIC,14,37,52,10
+	LTEXT			"Proxy Server",IDC_STATIC,14,55,52,10
+    GROUPBOX        "Registration Information",IDC_STATIC,7,7,218,65
+    LISTBOX         IDC_LINELIST,37,82,181,54,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Lines",IDC_STATIC,7,75,218,65
+    PUSHBUTTON      "+",IDC_ADDLINE,15,105,17,14
+    PUSHBUTTON      "-",IDC_REMOVELINE,15,120,17,14
+    GROUPBOX        "Debug",IDC_STATIC,7,140,218,31
+    EDITTEXT        IDC_DEBUG_FILE,65,150,153,13,ES_AUTOHSCROLL
+    LTEXT           "File",IDC_STATIC,14,150,46,10
+    LTEXT           "Copyright 2011 Nick Knight, see www.babblevoice.com for license information.",IDC_STATIC,7,175,218,15
+	CONTROL         103,IDC_STATIC,"Static",SS_BITMAP,45,185,109,40
+END
+
+IDD_DIALOG2 DIALOGEX 0, 0, 169, 77
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "babblevoice.com Line"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",ID_LINEADD_OK,53,56,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,111,56,50,14
+    EDITTEXT        IDC_LINE_NAME,37,17,116,13,ES_AUTOHSCROLL
+    LTEXT           "Name",IDC_STATIC,14,19,19,10
+    LTEXT           "URI",IDC_STATIC,15,32,26,10
+    EDITTEXT        IDC_LINE_URL,37,31,116,13,ES_AUTOHSCROLL
+    GROUPBOX        "Line Information",IDC_STATIC,7,7,154,43
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 225
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 161
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 70
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,0,6,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080904b0"
+        BEGIN
+            VALUE "Comments", "babblevoice"
+            VALUE "CompanyName", "babblevoice"
+            VALUE "FileDescription", "babblevoice.com SIP TSP"
+            VALUE "FileVersion", "0, 0, 6, 0"
+            VALUE "InternalName", "bv-tapi"
+            VALUE "LegalCopyright", "Copyright (C) 2011"
+            VALUE "LegalTrademarks", "Please see the copyright notice for further information"
+            VALUE "OriginalFilename", "bv-tapi.tsp"
+            VALUE "ProductName", "bv-tapi"
+            VALUE "ProductVersion", "1, 0, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x809, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "bitmap1.bmp"
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

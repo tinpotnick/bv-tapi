@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CF32F8F6-1F78-40CD-919E-CEB2A59283C4}</ProjectGuid>
+    <RootNamespace>asttapi</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.tsp</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)libs\sofia-sip-1.12.11\libsofia-sip-ua\nua\;$(SolutionDir)libs\sofia-sip-1.12.11\libsofia-sip-ua\su\;$(SolutionDir)libs\sofia-sip-1.12.11\win32\;$(SolutionDir)libs\sofia-sip-1.12.11\libsofia-sip-ua\url\;$(SolutionDir)libs\sofia-sip-1.12.11\libsofia-sip-ua\sip\;$(SolutionDir)libs\sofia-sip-1.12.11\libsofia-sip-ua\msg\;$(SolutionDir)libs\sofia-sip-1.12.11\libsofia-sip-ua\sdp\;$(SolutionDir)libs\sofia-sip-1.12.11\libsofia-sip-ua\nta\;$(SolutionDir)libs\sofia-sip-1.12.11\libsofia-sip-ua\nea\;$(SolutionDir)libs\sofia-sip-1.12.11\libsofia-sip-ua\soa\;$(SolutionDir)libs\sofia-sip-1.12.11\libsofia-sip-ua\iptsec\;$(SolutionDir)libs\sofia-sip-1.12.11\libsofia-sip-ua\tport\;$(SolutionDir)libs\sofia-sip-1.12.11\libsofia-sip-ua\bnf\;$(SolutionDir)libs\boost_1_49_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;DEBUGTSP;LIBSOFIA_SIP_UA_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>WSOCK32.LIB;Ws2_32.lib;Iphlpapi.lib;$(SolutionDir)libs\sofia-sip-1.12.11\win32\pthread\pthreadVC2.lib;$(SolutionDir)libs\win32\Debug\libsofia_sip_ua_static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)bv-tapi.tsp</OutputFile>
+      <Version>0.1</Version>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>LIBCMTD.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>bv_tapi.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)bv_tapi.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>$(OutDir)bv_tapi.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)libs\sofia-sip-1.12.11\libsofia-sip-ua\nua\;$(SolutionDir)libs\sofia-sip-1.12.11\libsofia-sip-ua\su\;$(SolutionDir)libs\sofia-sip-1.12.11\win32\;$(SolutionDir)libs\sofia-sip-1.12.11\libsofia-sip-ua\url\;$(SolutionDir)libs\sofia-sip-1.12.11\libsofia-sip-ua\sip\;$(SolutionDir)libs\sofia-sip-1.12.11\libsofia-sip-ua\msg\;$(SolutionDir)libs\sofia-sip-1.12.11\libsofia-sip-ua\sdp\;$(SolutionDir)libs\sofia-sip-1.12.11\libsofia-sip-ua\nta\;$(SolutionDir)libs\sofia-sip-1.12.11\libsofia-sip-ua\nea\;$(SolutionDir)libs\sofia-sip-1.12.11\libsofia-sip-ua\soa\;$(SolutionDir)libs\sofia-sip-1.12.11\libsofia-sip-ua\iptsec\;$(SolutionDir)libs\sofia-sip-1.12.11\libsofia-sip-ua\tport\;$(SolutionDir)libs\sofia-sip-1.12.11\libsofia-sip-ua\bnf\;$(SolutionDir)libs\boost_1_49_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;LIBSOFIA_SIP_UA_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>WSOCK32.LIB;Ws2_32.lib;Iphlpapi.lib;$(SolutionDir)libs\sofia-sip-1.12.11\win32\pthread\pthreadVC2.lib;$(SolutionDir)libs\win32\Release\libsofia_sip_ua_static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)bv-tapi.tsp</OutputFile>
+      <Version>0.3</Version>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>bv_tapi.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>$(OutDir)asttapi.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="bv-tapi.cpp" />
+    <ClCompile Include="config.cpp" />
+    <ClCompile Include="phone.cpp" />
+    <ClCompile Include="PhoneCall.cpp" />
+    <ClCompile Include="presence-tapi-bridge.cpp" />
+    <ClCompile Include="sofia-bridge.cpp" />
+    <ClCompile Include="tapi_lines.cpp" />
+    <ClCompile Include="utilities.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="afxres.h" />
+    <ClInclude Include="config.h" />
+    <ClInclude Include="dll.h" />
+    <ClInclude Include="phone.h" />
+    <ClInclude Include="PhoneCall.h" />
+    <ClInclude Include="presence-tapi-bridge.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="sofia-bridge.h" />
+    <ClInclude Include="tapi_lines.h" />
+    <ClInclude Include="utilities.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bitmap1.bmp" />
+    <None Include="bv_tapi.xml" />
+    <None Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="bv-tapi.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
